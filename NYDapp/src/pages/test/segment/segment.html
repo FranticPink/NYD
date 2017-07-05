@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Segments
+    </ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="segmentModel">
+      <ion-segment-button value="segmentOne">
+        segmentOne
+      </ion-segment-button>
+      <ion-segment-button value="segmentTwo">
+        segmentTwo
+      </ion-segment-button>
+      <ion-segment-button value="segmentThree">
+        segmentThree
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content   (pan)="tan()" overflow-scroll="true" style="overflow: hidden">
+  <div [ngSwitch]="segmentModel" (swipe)="swipeEvent($event)">
+    <ion-list *ngSwitchCase="'segmentOne'">
+      <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+       <ion-item >
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentOne</h2>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'segmentTwo'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentTwo</h2>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'segmentThree'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="../../assets/img/user/爱心.png">
+        </ion-thumbnail>
+        <h2>segmentThree</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

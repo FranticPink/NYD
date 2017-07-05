@@ -1,0 +1,63 @@
+page-translate{
+
+ .toolbar-background-ios {
+      background: #f03744;
+  }
+.toolbar-title-ios {
+    text-align: left;
+    margin-left:-80px;
+    font-size: 2.7rem;
+    font-weight: 600;
+    color: #fff;
+    pointer-events: auto;
+}
+.mydiv1 {
+    height:220px;
+    width:353px;
+    border: none;
+    align-content: center;
+
+}
+.mydiv2 {
+    height:50px;
+    width:353px;
+    border: none;
+    align-content: center;
+
+}
+.mydiv3 {
+    height:50px;
+    width:270px;
+    border: none;
+    text-align: left;
+    align-content: center;
+    margin: 0;
+    display: inline-block;
+    float: left;
+}
+.mydiv4 {
+    height:50px;
+    width:80px;
+    border: none;
+
+    align-content: center;
+    margin: 0;
+    display: inline-block;
+    float: left;
+
+}
+.mydiv5{
+     height:220px;
+    width:353px;
+    border: none;
+    align-content: center;
+}
+ion-select {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+     
+}
+}

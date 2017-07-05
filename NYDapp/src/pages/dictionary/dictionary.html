@@ -1,0 +1,110 @@
+<ion-header >
+  <ion-navbar> 
+    <div>
+     <table >
+      <tr>
+        <td style=" width:10%;text-align: center;">
+         <ion-icon name="mic" right style="color:white;"></ion-icon>
+        </td>
+        <td style="width:300px">
+         <ion-searchbar placeholder="在此输入要翻译的文本" style="background:white;"></ion-searchbar>
+        </td>
+        <td style=" width:12%;text-align: center;">
+          <ion-icon name="camera" right style="color:white;"></ion-icon>
+        </td>
+      </tr>
+    </table>
+    </div>
+
+
+  </ion-navbar>
+    <ion-segment [(ngModel)]="columnaModel" id="seg" >
+    <ion-segment-button value="1">
+      推荐
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      我的关注
+    </ion-segment-button>
+     <ion-segment-button value="3">
+      最热专题
+    </ion-segment-button>
+    <ion-segment-button value="4">
+      最新专栏
+    </ion-segment-button>
+    <ion-segment-button value="5">
+      全部
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content style=" margin-top: -38px" text-center class="dictionary-page"  id="content" (ionScroll)="onScroll($event)">
+
+
+  <div [ngSwitch]="columnaModel" (swipe)="swipeEvent($event)" (click)="swipeEvent($event)">
+  <ion-list *ngSwitchCase="'1'">
+    <div>
+    <ion-slides> 
+  <ion-slide >
+    <img src="assets/img/n1.png">
+  </ion-slide>
+  <ion-slide>
+    <img src="assets/img/n2.png">
+  </ion-slide>
+  <ion-slide>
+   <img src="assets/img/n3.png">
+  </ion-slide>
+    <ion-slide>
+   <img src="assets/img/n4.png">
+  </ion-slide>  
+  <ion-slide>
+   <img src="assets/img/n5.png">
+  </ion-slide>
+</ion-slides>
+</div>
+    <ion-item ion-item *ngFor="let item of items" (click)="openPage(item)" icon-start>
+      <ion-thumbnail item-end>
+      <img src="../../assets/img/1.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-item>
+  </ion-list>
+    <ion-list *ngSwitchCase="'2'">
+    <ion-item ion-item *ngFor="let item of items" (click)="openPage(item)" icon-start>
+      <ion-thumbnail item-end>
+      <img src="../../assets/img/2.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-item>
+  </ion-list>
+    <ion-list *ngSwitchCase="'3'">
+    <ion-item ion-item *ngFor="let item of items" (click)="openPage(item)" icon-start>
+      <ion-thumbnail item-end>
+      <img src="../../assets/img/6.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-item>
+  </ion-list>
+    <ion-list *ngSwitchCase="'4'">
+    <ion-item ion-item *ngFor="let item of items" (click)="openPage(item)" icon-start>
+      <ion-thumbnail item-end>
+      <img src="../../assets/img/4.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-item>
+  </ion-list>
+    <ion-list *ngSwitchCase="'5'">
+    <ion-item ion-item *ngFor="let item of items" (click)="openPage(item)" icon-start>
+      <ion-thumbnail item-end>
+      <img src="../../assets/img/5.jpg">
+      </ion-thumbnail>
+      <h2> {{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </ion-item>
+  </ion-list>
+  </div>
+
+</ion-content>

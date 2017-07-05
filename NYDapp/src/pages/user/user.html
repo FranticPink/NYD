@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+  <ion-item class="n1"  (click)="openPage()"> 
+    <ion-avatar item-end>
+      <img src="../../assets/img/1.jpg" style="width:72px;height:72px">
+    </ion-avatar>
+    <div>
+        <h1>登录</h1>
+        <p>立即登录，解锁更多功能！</p>
+    </div>
+        
+  </ion-item>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-list>  
+  <ion-item-group> 
+    <button ion-item (click)="openPage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/消息.png">
+      </ion-avatar>
+      <h3>消息中心</h3>
+    </button>
+    <button ion-item (click)="openPage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/关注.png">
+      </ion-avatar>
+      <h3>我的关注</h3>
+    </button>
+</ion-item-group> 
+<ion-item-group> 
+    <button ion-item (click)="openPage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/收藏.png">
+      </ion-avatar>
+      <h3>我的收藏</h3>
+    </button>
+
+    <button ion-item (click)="openextensionPage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/扩展.png">
+      </ion-avatar>
+      <h3>扩充词库和语音库</h3>
+    </button>
+</ion-item-group> 
+<ion-item-group> 
+    <button ion-item (click)="openSettingPage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/设置.png">
+      </ion-avatar>
+      <h3>设置</h3>
+    </button>
+
+    <button ion-item (click)="opengradePage()">
+      <ion-avatar item-start>
+        <img src="../../assets/img/user/爱心.png">
+      </ion-avatar>
+      <h3>满意度调查</h3>
+    </button>
+</ion-item-group> 
+</ion-list>
+</ion-content>

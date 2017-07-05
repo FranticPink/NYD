@@ -1,0 +1,133 @@
+<ion-header id="ww">
+  <ion-navbar >
+    <table id="tt">
+      <tr>
+        <td style="width:320px">
+          <ion-searchbar> </ion-searchbar>
+        </td>
+        <td>
+          <ion-icon name="person" class="ren"></ion-icon>
+        </td>
+      </tr>
+    </table>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content style=" margin-top: -53px" (ionScroll)="onScroll($event)">
+<div>
+    <ion-slides> 
+  <ion-slide >
+    <img src="../../assets/img/n1.png">
+  </ion-slide>
+  <ion-slide>
+    <img src="../../assets/img/n2.png">
+  </ion-slide>
+  <ion-slide>
+   <img src="../../assets/img/n3.png">
+  </ion-slide>
+    <ion-slide>
+   <img src="../../assets/img/n4.png">
+  </ion-slide>  
+  <ion-slide>
+   <img src="../../assets/img/n5.png">
+  </ion-slide>
+</ion-slides>
+</div>
+<div>
+  <ion-slides>
+    <ion-slide> 
+      <ion-grid>
+    <ion-row>
+      <ion-col (click)="openPage()">
+            <img  class="icon" src="../../assets/img/courses/四六级.png">
+           <p>四六级</p>>
+      </ion-col>
+      <ion-col>
+          <img class="icon" src="../../assets/img/courses/初中.png">
+          <p>初中</p>
+      </ion-col>
+      <ion-col>
+          <img class="icon" src="../../assets/img/courses/专四专八.png">
+          <p>专四专八</p>
+      </ion-col>
+      <ion-col>
+          <img  class="icon" src="../../assets/img/courses/高中.png">
+         <p>高中</p> 
+      </ion-col>
+
+    </ion-row>
+        <ion-row>
+      <ion-col>
+          <img class="icon" src="../../assets/img/courses/实用英语.png">
+         <p>实用英语</p> 
+      </ion-col>
+      <ion-col>
+          <img class="icon" src="../../assets/img/courses/建筑.png">
+          <p>建筑</p>
+      </ion-col>
+      <ion-col>
+           <img class="icon" src="../../assets/img/courses/公务员.png">
+          <p>公务员</p>
+      </ion-col>
+      <ion-col>
+           <img class="icon" src="../../assets/img/courses/自我提升.png">
+          <p>自我提升</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    </ion-slide>
+      <ion-slide> 
+      <ion-grid>
+    <ion-row>
+      <ion-col>
+            <img src="../../assets/img/courses/四六级.png">
+           <p>四六级</p>>
+      </ion-col>
+      <ion-col>
+          <img src="../../assets/img/courses/初中.png">
+          <p>初中</p>
+      </ion-col>
+      <ion-col>
+          <img src="../../assets/img/courses/专四专八.png">
+          <p>专四专八</p>
+      </ion-col>
+      <ion-col>
+          <img src="../../assets/img/courses/高中.png">
+         <p>高中</p> 
+      </ion-col>
+
+    </ion-row>
+        <ion-row>
+      <ion-col>
+          <img src="../../assets/img/courses/实用英语.png">
+         <p>实用英语</p> 
+      </ion-col>
+      <ion-col>
+          <img src="../../assets/img/courses/建筑.png">
+          <p>建筑</p>
+      </ion-col>
+      <ion-col>
+           <img src="../../assets/img/courses/公务员.png">
+          <p>公务员</p>
+      </ion-col>
+      <ion-col>
+           <img src="../../assets/img/courses/自我提升.png">
+          <p>自我提升</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</div>
+
+  <h1>
+    今日公开课
+  </h1>
+  <ion-list>  
+    <button ion-item *ngFor="let item of items" (click)=detail(item)>  
+        <h2>{{item.coursename}}</h2>
+        <p>{{item.description}}</p>
+    </button>
+  </ion-list>
+</ion-content>

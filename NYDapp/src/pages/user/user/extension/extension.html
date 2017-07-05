@@ -1,0 +1,16 @@
+<ion-header>    
+    <ion-navbar>    
+        <ion-title> 
+            扩充词库和语音库
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>   
+
+<ion-list >
+<ion-item *ngFor="let item of items" >
+    <h2>{{item.name}}</h2>
+    <p>词条数量{{item.num}}  {{item.size}}</p>
+</ion-item>
+</ion-list>
+</ion-content>

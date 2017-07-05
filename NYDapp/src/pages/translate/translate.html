@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>翻译</ion-title>
+  </ion-navbar>
+  <ion-card>  
+
+
+  <div class="mydiv1">
+  <div class="mydiv2">
+      <div class="mydiv3">
+        <ion-list>
+          <ion-item>
+            
+            <ion-select [(ngModel)]="gaming" interface="popover">
+              <ion-option value="auto" selected="true">语言自动检测</ion-option>
+              <ion-option value="ec">英文->中文</ion-option>
+              <ion-option value="ce">中文->英文</ion-option>
+              <ion-option value="rc">日语->中文</ion-option>
+              <ion-option value="cr">中文->日语</ion-option>
+              <ion-option value="hc">韩语->中文</ion-option>
+              <ion-option value="ch">中文->韩语</ion-option>
+              <ion-option value="fc">法语->中文</ion-option>
+              <ion-option value="cf">中文->法语</ion-option>
+            </ion-select>
+          </ion-item>
+      </ion-list>
+      </div>
+       <div class="mydiv4"> 
+          <button  ion-button icon-right>  
+            翻译->
+          </button>
+      </div>
+  </div>
+    <div>
+      <textarea name="MSG" style="width:100%;height:170px">
+      在此输入要翻译的文本
+      </textarea>
+       <ion-checkbox id="check" color="dark" checked="true"></ion-checkbox>
+    </div>
+
+</div>
+  </ion-card>
+</ion-header>
+
+<ion-content padding>
+<ion-card ng-if="check.checked='false'">  
+  <div class="mydiv5">
+      <textarea name="MSG" style="width:100%;height:100%">
+      译文
+      </textarea>
+  </div>
+</ion-card>
+<ion-list >
+  <button ion-item *ngFor="let item of items" (click)="openPage(item)">  
+    <h2>
+      {{item.yuanwen}}
+    </h2>
+    <p>
+      {{item.yiwen}}
+    </p>
+  </button>
+</ion-list>
+</ion-content>

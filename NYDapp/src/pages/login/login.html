@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>有道登录</ion-title>
+        <ion-buttons end (click)="regist();" style="color:white">
+           注册
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <img class="dv_logo" src="../../assets/img/1.jpg" />
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label floating>账号：</ion-label>
+            <ion-input type="text" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>密码：</ion-label>
+            <ion-input type="password" [(ngModel)]="pass"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <div padding>
+        <button ion-button color="secondary" (click)="login();" block>登录</button>
+    </div>
+
+    <!--<div class="other_login">---第三方登录---</div>
+    <div padding>
+        <button (click)="QQinit();" class="qqlogin" ion-button block>QQ登录</button>
+    </div>-->
+
+</ion-content>
